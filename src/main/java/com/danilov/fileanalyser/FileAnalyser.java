@@ -8,10 +8,6 @@ public class FileAnalyser {
     public static void main(String[] args) throws IOException {
         String path = "I:/txt.txt";
         String word = "duck";
-
-        for (int i = 0; i <args.length ; i++) {
-            System.out.println(args[i]);
-        }
         analyseFile(path, word);
     }
 
