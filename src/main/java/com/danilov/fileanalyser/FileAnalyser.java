@@ -5,9 +5,13 @@ import java.nio.file.InvalidPathException;
 
 public class FileAnalyser {
 
+
+
     public static void main(String[] args) throws IOException {
         String path = "I:/txt.txt";
         String word = "duck";
+            args[0] = path;
+            args[1] = word;
         analyseFile(path, word);
     }
 
