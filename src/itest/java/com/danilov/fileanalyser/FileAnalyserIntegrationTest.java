@@ -3,7 +3,7 @@ package com.danilov.fileanalyser;
 import java.io.*;
 import java.nio.file.InvalidPathException;
 
-public class FileAnalyser {
+public class FileAnalyserIntegrationTest {
     public static void main(String[] args) throws IOException {
         String path = "I:/txt.txt";
         String word = "duck";
@@ -29,7 +29,7 @@ public class FileAnalyser {
                     stringBuilder.append(line);
                 }
 
-                getConcurrency(stringBuilder, word);
+                printConcurrency(stringBuilder, word);
 
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
@@ -37,7 +37,7 @@ public class FileAnalyser {
         }
     }
 
-    private static void getConcurrency(StringBuilder line, String word) {
+    private static void printConcurrency(StringBuilder line, String word) {
         int count = 0;
 
         for (String sentence : line.toString().split("(?<=[.!?])\\s*")) {
